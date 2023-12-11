@@ -48,10 +48,10 @@ export default function JobPost({jobPost}: JobPostProps) {
     const [email, setEmail] = useState('');
     const [coverLetter, setCoverLetter] = useState('');
     const [applicationData, setApplicationData] = useState({
-        applicationId: '',  // Assuming this is generated or fetched from somewhere
+        applicationId: '',
         jobId: jobPost.jobPostingId.toString(),
-        applicantUserId: '',  // Assuming this comes from user context or similar
-        submissionDate: new Date().toISOString().split('T')[0],  // Current date
+        applicantUserId: '',
+        submissionDate: new Date().toISOString().split('T')[0],
         status: 'pending',
         email: '',
         coverLetter: '',
@@ -65,7 +65,7 @@ export default function JobPost({jobPost}: JobPostProps) {
 
     const handleClose = () => {
         setOpen(false);
-        setApplicationData({...applicationData, email: '', coverLetter: '', cv: null}); // Reset specific fields
+        setApplicationData({...applicationData, email: '', coverLetter: '', cv: null});
     };
 
     const handleInputChange = (e) => {
